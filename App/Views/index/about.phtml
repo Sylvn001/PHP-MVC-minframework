@@ -1,6 +1,10 @@
-<h1>About </h1>
-<hr>
-<?php echo 'About';
-    foreach($this->view->data as $key => $value){
-        echo $value . "<br>";
+<h2 class="text-primary">About </h2>
+
+<?php 
+    foreach($this->view->data as $key => $info){
+        $inf =   $info['id'] . '-'.
+        $info['title'] . '-' .
+        $info['description'] . '-';
+
+        echo $inf . '<br>';
     }

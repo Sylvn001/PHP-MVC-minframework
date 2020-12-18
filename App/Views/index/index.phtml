@@ -1,8 +1,11 @@
-<h1>Index </h1>
-<hr>
+<h2>Home </h2>
 
-<?php echo 'index';
+<?php 
 
-    foreach($this->view->data as $key => $value){
-        echo $value . "<br>";
+    foreach($this->view->data as $key => $product){
+        $prod = 
+            $product['id'] . '-' . 
+            $product['description'] . '-' . 
+            $product['price'];
+        echo $prod . '<br>';
     }
